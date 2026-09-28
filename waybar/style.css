@@ -1,0 +1,226 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+window#waybar {
+    background: transparent;
+    color: #e6edf7;
+}
+
+/* ==============================
+   TOOLTIP
+   ============================== */
+
+tooltip {
+    background: rgba(7, 13, 25, 0.96);
+    border: 1px solid rgba(103, 232, 249, 0.25);
+    border-radius: 10px;
+    padding: 8px;
+    color: #e6edf7;
+}
+
+/* ==============================
+   SOL TARAF
+   ============================== */
+
+#custom-launcher {
+    background: rgba(7, 15, 30, 0.86);
+    color: #67e8f9;
+
+    padding: 0 14px;
+    margin-left: 4px;
+
+    border: 1px solid rgba(103, 232, 249, 0.22);
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.20);
+}
+
+#custom-launcher:hover {
+    color: #ffffff;
+    background: rgba(103, 232, 249, 0.15);
+    border-color: rgba(103, 232, 249, 0.40);
+}
+
+/* ==============================
+   CPU
+   ============================== */
+
+#cpu {
+    background: rgba(7, 15, 30, 0.86);
+    color: #c4b5fd;
+
+    padding: 0 11px;
+
+    border-top: 1px solid rgba(125, 211, 252, 0.16);
+    border-bottom: 1px solid rgba(125, 211, 252, 0.16);
+}
+
+#cpu:hover {
+    background: rgba(196, 181, 253, 0.12);
+}
+
+/* ==============================
+   RAM
+   ============================== */
+
+#memory {
+    background: rgba(7, 15, 30, 0.86);
+    color: #a5b4fc;
+
+    padding: 0 11px;
+
+    border-top: 1px solid rgba(125, 211, 252, 0.16);
+    border-bottom: 1px solid rgba(125, 211, 252, 0.16);
+
+    border-radius: 0 12px 12px 0;
+}
+
+#memory:hover {
+    background: rgba(165, 180, 252, 0.12);
+}
+
+/* ==============================
+   CLOCK
+   ============================== */
+
+#clock {
+    background: rgba(7, 15, 30, 0.88);
+
+    color: #e0f2fe;
+
+    padding: 0 17px;
+
+    border: 1px solid rgba(125, 211, 252, 0.20);
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.22);
+}
+
+#clock:hover {
+    color: #67e8f9;
+    background: rgba(103, 232, 249, 0.12);
+}
+
+/* ==============================
+   NETWORK
+   ============================== */
+
+#network {
+    background: rgba(7, 15, 30, 0.86);
+    color: #7dd3fc;
+
+    padding: 0 11px;
+
+    border-left: 1px solid rgba(125, 211, 252, 0.15);
+    border-top: 1px solid rgba(125, 211, 252, 0.15);
+    border-bottom: 1px solid rgba(125, 211, 252, 0.15);
+
+    border-radius: 12px 0 0 12px;
+}
+
+#network:hover {
+    background: rgba(125, 211, 252, 0.12);
+}
+
+#network.disconnected {
+    color: #fb7185;
+}
+
+/* ==============================
+   BLUETOOTH
+   ============================== */
+
+#bluetooth {
+    background: rgba(7, 15, 30, 0.86);
+    color: #c4b5fd;
+
+    padding: 0 11px;
+
+    border-top: 1px solid rgba(125, 211, 252, 0.15);
+    border-bottom: 1px solid rgba(125, 211, 252, 0.15);
+}
+
+#bluetooth:hover {
+    background: rgba(196, 181, 253, 0.12);
+}
+
+/* ==============================
+   AUDIO
+   ============================== */
+
+#pulseaudio {
+    background: rgba(7, 15, 30, 0.86);
+    color: #f9a8d4;
+
+    padding: 0 11px;
+
+    border-top: 1px solid rgba(125, 211, 252, 0.15);
+    border-bottom: 1px solid rgba(125, 211, 252, 0.15);
+}
+
+#pulseaudio:hover {
+    background: rgba(249, 168, 212, 0.12);
+}
+
+#pulseaudio.muted {
+    color: #64748b;
+}
+
+/* ==============================
+   BATTERY
+   ============================== */
+
+#battery {
+    background: rgba(7, 15, 30, 0.86);
+    color: #86efac;
+
+    padding: 0 11px;
+
+    border-top: 1px solid rgba(125, 211, 252, 0.15);
+    border-bottom: 1px solid rgba(125, 211, 252, 0.15);
+}
+
+#battery:hover {
+    background: rgba(134, 239, 172, 0.10);
+}
+
+#battery.warning {
+    color: #facc15;
+}
+
+#battery.critical {
+    color: #fb7185;
+}
+
+#battery.charging {
+    color: #67e8f9;
+}
+
+/* ==============================
+   TRAY
+   ============================== */
+
+#tray {
+    background: rgba(7, 15, 30, 0.86);
+
+    padding: 0 10px;
+
+    border-right: 1px solid rgba(125, 211, 252, 0.15);
+    border-top: 1px solid rgba(125, 211, 252, 0.15);
+    border-bottom: 1px solid rgba(125, 211, 252, 0.15);
+
+    border-radius: 0 12px 12px 0;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}

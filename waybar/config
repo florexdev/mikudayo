@@ -1,0 +1,134 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "spacing": 5,
+    "margin-top": 6,
+    "margin-left": 8,
+    "margin-right": 8,
+
+    "modules-left": [
+        "custom/launcher",
+        "cpu",
+        "memory"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "network",
+        "bluetooth",
+        "pulseaudio",
+        "battery",
+        "tray"
+    ],
+
+    "custom/launcher": {
+        "format": "󰣇",
+        "tooltip": "Uygulamalar",
+        "on-click": "rofi -show drun",
+        "on-click-right": "systemsettings"
+    },
+
+    "cpu": {
+        "interval": 2,
+        "format": "󰻠  {}%",
+        "format-alt": "󰻠  {usage}% | {avg_frequency} GHz",
+        "tooltip": true,
+        "tooltip-format": "CPU kullanımı: {usage}%\nFrekans: {avg_frequency} GHz",
+        "on-click": "plasma-systemmonitor"
+    },
+
+    "memory": {
+        "interval": 2,
+        "format": "󰍛  {}%",
+        "tooltip": true,
+        "tooltip-format": "RAM: {used:0.1f} GB / {total:0.1f} GB\nKullanım: {percentage}%",
+        "on-click": "plasma-systemmonitor"
+    },
+
+    "clock": {
+        "interval": 1,
+        "format": "󰥔  {:%H:%M}",
+        "format-alt": "󰃭  {:%d.%m.%Y}",
+        "tooltip": true,
+        "tooltip-format": "{:%A, %d %B %Y}\n\nTakvim",
+        "on-click": "kalendar",
+        "on-click-right": "kcalc"
+    },
+
+    "network": {
+        "format-wifi": "󰖩  {signalStrength}%",
+        "format-ethernet": "󰈀  LAN",
+        "format-disconnected": "󰖪  Offline",
+        "tooltip": true,
+        "tooltip-format": "Arayüz: {ifname}\nSSID: {essid}\nSinyal: {signalStrength}%\nIP: {ipaddr}",
+        "on-click": "nm-connection-editor",
+        "on-click-right": "systemsettings"
+    },
+
+    "bluetooth": {
+        "format": "󰂯",
+        "format-disabled": "󰂲",
+        "format-connected": "󰂱",
+        "format-no-controller": "󰂲",
+        "tooltip": true,
+        "tooltip-format": "Bluetooth\n{num_connections} bağlantı",
+        "on-click": "blueman-manager",
+        "on-click-right": "systemsettings"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰖁  Muted",
+        "format-icons": {
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ],
+            "headphone": "󰋋",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰦧",
+            "car": "󰄋"
+        },
+        "scroll-step": 5,
+        "tooltip": true,
+        "tooltip-format": "Ses: {volume}%",
+        "on-click": "pavucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-up": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": "󰂄  {capacity}%",
+        "format-plugged": "󰚥  {capacity}%",
+        "format-full": "󰁹  {capacity}%",
+        "format-icons": [
+            "󰁺",
+            "󰁼",
+            "󰁾",
+            "󰂀",
+            "󰂂"
+        ],
+        "tooltip": true,
+        "tooltip-format": "Batarya: {capacity}%\nKalan süre: {timeTo}",
+        "on-click": "systemsettings",
+        "on-click-right": "systemsettings"
+    },
+
+    "tray": {
+        "icon-size": 17,
+        "spacing": 7,
+        "show-passive-items": true
+    }
+}
