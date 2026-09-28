@@ -1,0 +1,84 @@
+* {
+    /* Arka plan rengi ve %85 saydamlık (alacritty/kitty ayarına sadık kalınarak) */
+    background:                  rgba(15, 20, 30, 0.85);
+    background-color:            rgba(15, 20, 30, 0.85);
+
+    /* Terminalindeki foreground/yazı rengi */
+    foreground:                  #D0D6E3;
+
+    /* Miku Turkuazı / Neon Cyan (Vurgu rengi) */
+    miku-cyan:                   #00FFCC;
+
+    /* Seçim alanı arka planı (Terminal selection_background rengi) */
+    selected-bg:                 #3A648A;
+
+    /* Pencere kenarlıkları için mor/eflatun tonu */
+    border-purple:               #8A3A8A;
+
+    text-color:                  @foreground;
+    font:                        "JetBrains Mono Nerd Font 11";
+}
+
+window {
+    background-color:            @background;
+    border:                      2px;
+    border-color:                @miku-cyan;
+    border-radius:               10px;
+    width:                       500px;
+    padding:                     20px;
+}
+
+mainbox {
+    background-color:            transparent;
+    children:                    [ inputbar, listview ];
+}
+
+inputbar {
+    background-color:            transparent;
+    children:                    [ prompt, entry ];
+    padding:                     4px;
+    margin:                      0px 0px 10px 0px;
+}
+
+prompt {
+    background-color:            @selected-bg;
+    padding:                     6px 12px;
+    text-color:                  @miku-cyan;
+    border-radius:               4px;
+}
+
+entry {
+    background-color:            transparent;
+    padding:                     6px;
+    text-color:                  @foreground;
+}
+
+listview {
+    background-color:            transparent;
+    columns:                     1;
+    lines:                       8;
+    fixed-height:                true;
+}
+
+element {
+    background-color:            transparent;
+    padding:                     8px;
+    border-radius:               4px;
+}
+
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+element selected.normal {
+    background-color:            @selected-bg;
+    text-color:                  @miku-cyan;
+    border:                      1px;
+    border-color:                @border-purple;
+}
+
+element alternate.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
